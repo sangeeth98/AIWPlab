@@ -1,0 +1,21 @@
+import numpy as np
+import math
+import pandas as pd
+from sklearn.linear_model import LinearRegression
+from sklearn.model_selection import train_test_split
+from sklearn import metrics
+data_path ="Salary_Data.csv" 
+data = pd.read_csv(data_path)
+X = (data.YearsExperience).values.reshape(-1,1)
+y = (data.Salary).values.reshape(-1,1)
+X_train, X_test, y_train, y_test =train_test_split(X, y, test_size = 0.2,random_state=0)
+linreg = LinearRegression()
+linreg.fit(X_train, y_train)
+y_pred = linreg.predict(X_test)
+print(np.sqrt(metrics.mean_squared_error(y_test, y_pred))) 
+t=0
+k=0
+for i,j in zip(y_test,y_pred):
+   t+= math.pow((i-j),2)
+   k+=1;
+print(math.pow((t/k),0.5))
