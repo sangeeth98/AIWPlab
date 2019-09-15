@@ -13,7 +13,7 @@ from sklearn.metrics import mean_squared_log_error
 
 # %%
 # Read csv file
-train_file = '~/Documents/AIWP/Lab/LabTask_3\
+train_file = '~/Documents/AIWPlab/LabTask_3\
 /house-prices-advanced-regression-techniques\
 /train.csv'
 data = pd.read_csv(train_file)
@@ -34,7 +34,7 @@ data_model.fit(X, y)
 
 # %%
 # Predict
-test_file = '~/Documents/AIWP/Lab/LabTask_3\
+test_file = '~/Documents/AIWPlab/LabTask_3\
 /house-prices-advanced-regression-techniques\
 /test.csv'
 test_data = pd.read_csv(test_file)
@@ -46,7 +46,7 @@ print(result)
 
 # %%
 # Evaluate model
-submission_file = '~/Documents/AIWP/Lab/LabTask_3\
+submission_file = '~/Documents/AIWPlab/LabTask_3\
 /house-prices-advanced-regression-techniques\
 /sample_submission.csv'
 submission_data = pd.read_csv(submission_file)
